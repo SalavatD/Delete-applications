@@ -1,0 +1,119 @@
+ui_print("Delete applications.");
+
+ui_print("Mount /system...");
+run_program("/sbin/mount", "-t", "auto", "/system");
+ui_print("/system mounted.");
+
+ui_print("Deleting from /system/app/ started...");
+
+ui_print("Delete not installed applications...");
+delete_recursive("/system/app/AmazonIMDb");
+delete_recursive("/system/app/AmazonShopping");
+delete_recursive("/system/app/ATOKIME");
+delete_recursive("/system/app/Babe");
+delete_recursive("/system/app/BRApps");
+delete_recursive("/system/app/Duo");
+delete_recursive("/system/app/FlipfontMFinanceTW");
+delete_recursive("/system/app/FlipfontMYingHei");
+delete_recursive("/system/app/FlipfontMYuppyTW");
+delete_recursive("/system/app/Go2Pay");
+delete_recursive("/system/app/IBook");
+delete_recursive("/system/app/iFilter");
+delete_recursive("/system/app/LatinImeGoogle");
+delete_recursive("/system/app/MyTIMMobile");
+delete_recursive("/system/app/SelectedbyTim");
+delete_recursive("/system/app/TIMMusic");
+delete_recursive("/system/app/TIMMyNews");
+delete_recursive("/system/app/TIMPersonal");
+delete_recursive("/system/app/TIMVision");
+
+ui_print("Delete any applications...");
+delete_recursive("/system/app/BluetoothExt");
+delete_recursive("/system/app/BluetoothMidiService");
+delete_recursive("/system/app/BookmarkProvider");
+delete_recursive("/system/app/FlipfontFelbridge");
+delete_recursive("/system/app/FlipfontSyndor");
+delete_recursive("/system/app/FM2");
+delete_recursive("/system/app/PartnerBookmarksProvider");
+delete_recursive("/system/app/Protips");
+delete_recursive("/system/app/Stk");
+delete_recursive("/system/app/UserDictionaryProvider");
+
+ui_print("Delete Google applications...");
+delete_recursive("/system/app/CalendarGoogle");
+delete_recursive("/system/app/Drive");
+delete_recursive("/system/app/DriveActivator");
+delete_recursive("/system/app/Gmail2");
+delete_recursive("/system/app/GoogleContactsSyncAdapter");
+delete_recursive("/system/app/Hangouts");
+delete_recursive("/system/app/Maps");
+delete_recursive("/system/app/Music2");
+delete_recursive("/system/app/Photos");
+delete_recursive("/system/app/talkback");
+delete_recursive("/system/app/Videos");
+delete_recursive("/system/app/YouTube");
+
+ui_print("Delete partner applications...");
+delete_recursive("/system/app/Facebook");
+delete_recursive("/system/app/facebook-appmanager");
+delete_recursive("/system/app/FacebookMessenger");
+delete_recursive("/system/app/Instagram");
+delete_recursive("/system/app/WebStorage");
+
+ui_print("Delete ASUS applications...");
+delete_recursive("/system/app/AsusAnalytics");
+delete_recursive("/system/app/ASUSPartnerHomepageProvider");
+delete_recursive("/system/app/AudioWizard");
+delete_recursive("/system/app/AudioWizardView");
+delete_recursive("/system/app/BrowserGenie");
+delete_recursive("/system/app/DLNAService");
+delete_recursive("/system/app/DMClient");
+delete_recursive("/system/app/GameBroadcasterService");
+delete_recursive("/system/app/LaserRuler");
+delete_recursive("/system/app/MyASUS");
+delete_recursive("/system/app/PlayTo");
+delete_recursive("/system/app/QuickMemo");
+delete_recursive("/system/app/TextAnalyticsService");
+delete_recursive("/system/app/TwinApps");
+delete_recursive("/system/app/ZenTalk");
+delete_recursive("/system/app/ZenUIHelp");
+
+ui_print("Deleting from /system/priv-app/ started...");
+
+ui_print("Delete any applications...");
+delete_recursive("/system/priv-app/BlockedNumberProvider");
+
+ui_print("Delete Google applications...");
+delete_recursive("/system/priv-app/CalendarProvider");
+delete_recursive("/system/priv-app/CallLogBackup");
+delete_recursive("/system/priv-app/GoogleBackupTransport");
+delete_recursive("/system/priv-app/GoogleFeedback");
+delete_recursive("/system/priv-app/GooglePartnerSetup");
+delete_recursive("/system/priv-app/Velvet");
+
+ui_print("Delete partner applications...");
+delete_recursive("/system/priv-app/facebook-installer");
+
+ui_print("Delete ASUS applications...");
+delete_recursive("/system/priv-app/AsusDemoService");
+delete_recursive("/system/priv-app/AsusDemoUI");
+delete_recursive("/system/priv-app/AsusEasyLauncher");
+delete_recursive("/system/priv-app/AsusEmergencyHelp");
+delete_recursive("/system/priv-app/AsusEmergencyInfo");
+delete_recursive("/system/priv-app/AsusGalleryBurst");
+delete_recursive("/system/priv-app/AsusKidsLauncher");
+delete_recursive("/system/priv-app/AsusSoundRecorder");
+delete_recursive("/system/priv-app/FileManager");
+delete_recursive("/system/priv-app/GameBroadcaster");
+delete_recursive("/system/priv-app/LogUploader");
+delete_recursive("/system/priv-app/LogUploaderProxy");
+delete_recursive("/system/priv-app/WeatherTime");
+delete_recursive("/system/priv-app/StorageManager");
+
+ui_print("Deleting finish.");
+
+ui_print("Unmount /system...");
+unmount("/system");
+ui_print("/system unmounted.");
+
+ui_print("Done.");
